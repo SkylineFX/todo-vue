@@ -7,8 +7,8 @@ const toggleDark = useToggle(isDark)
 
 <template>
   <TransitionGroup tag="div" name="rotate" class="w-fit h-fit rounded-full cursor-pointer" @click="toggleDark()">
-    <img src="/src/assets/todo-app-main/images/icon-sun.svg" alt="" v-if="isDark" class="w-5 h-5 fill-dark-gray-300 dark:fill:light-gray-100" key="sun">
-    <img src="/src/assets/todo-app-main/images/icon-moon.svg" alt="" v-if="!isDark" class="w-5 h-5 fill-dark-gray-300 dark:fill:light-gray-100" key="moon">
+    <img src="/src/assets/images/icon-sun.svg" alt="" v-if="isDark" class="w-5 h-5 fill-dark-gray-300 dark:fill:light-gray-100" key="sun">
+    <img src="/src/assets/images/icon-moon.svg" alt="" v-if="!isDark" class="w-5 h-5 fill-dark-gray-300 dark:fill:light-gray-100" key="moon">
   </TransitionGroup>
 </template>
 

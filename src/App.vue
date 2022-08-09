@@ -11,7 +11,7 @@ import TodoList from './components/TodoList.vue';
     <TodoList/>
   </main>
   <footer class="w-full h-20 flex items-center justify-center select-none">
-    <p class="text-dark-gray-300 dark:text-light-gray-100 text-sm">Drag and drop to reorder list (Not available yet)</p>
+    <p class="text-dark-gray-300 dark:text-light-gray-100 text-sm">Drag and drop to reorder list</p>
   </footer>
 </template>
 
