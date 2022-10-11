@@ -4,13 +4,14 @@ import { ref } from 'vue'
 import { Todo } from '../todo'
 import TodoInput from './TodoInput.vue'
 
+// Variables initialization
 let todos = ref<Todo[]>([]);
 if(localStorage.getItem('todos'))
   todos.value = JSON.parse(localStorage.getItem("todos")!);
-
 let undone = ref<number>(0);
 const filter = ref<string>('all');
 
+// Functions
 const addTodo = (todo: Todo) => {
   todos.value.push(todo);
   updateTodo();
@@ -25,6 +26,11 @@ const updateTodo = () => {
   localStorage.setItem("todos", JSON.stringify(todos.value)) 
 }
 
+const clearCompleted = () => {
+  todos.value = todos.value.filter(item => !item.checked);
+  updateTodo();
+}
+
 undone = computed(() => {
   let nr = 0;
   todos.value.forEach((todo: Todo) => {
@@ -32,11 +38,6 @@ undone = computed(() => {
   })
   return nr;
 });
-
-const clearCompleted = () => {
-  todos.value = todos.value.filter(item => !item.checked);
-  updateTodo();
-}
 
 const filteredTodos = computed<Todo[]>(() => {
   if(filter.value === "all")
@@ -46,6 +47,8 @@ const filteredTodos = computed<Todo[]>(() => {
   else (filter.value === "completed")
     return todos.value.filter((item) => item.checked);
 });
+
+// Drag and drop
 
 </script>
 

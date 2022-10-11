@@ -28,8 +28,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'wave-header-light': "url('src/assets/images/wave-header-light.svg')",
-        'wave-header-dark': "url('src/assets/images/wave-header-dark.svg')",
+        'wave-header-light': "url('/wave-header-light.svg')",
+        'wave-header-dark': "url('/wave-header-dark.svg')",
       },
     },
   },
