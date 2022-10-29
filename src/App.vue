@@ -4,7 +4,7 @@ import TodoList from './components/TodoList.vue';
 </script>
 
 <template>
-  <header class="w-full h-[25vh] lg:min-h-[17.5rem] lg:h-[30vh]">
+  <header class="w-full h-[16rem] lg:h-[20rem]">
     <Header/>
   </header>
   <main class="w-full min-h-[75vh] -mt-20 lg:-mt-32">
